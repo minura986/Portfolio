@@ -1,8 +1,7 @@
 .contact__container {
-    /* Changed to single column to center the content */
-    grid-template-columns: max-content;
+    grid-template-columns: 1fr; /* Changed from max-content to full width */
     justify-content: center;
-    column-gap: 6rem;
+    text-align: center;
     padding-bottom: 3rem;
 }
 
@@ -13,24 +12,39 @@
     margin-bottom: var(--mb-1-5);
 }
 
+.contact__content {
+    /* Ensure content takes full width to allow grid to spread */
+    width: 100%; 
+    max-width: 1000px; /* Limit max width for large screens */
+    margin: 0 auto;
+}
+
 .contact__info {
     display: grid;
-    row-gap: 1rem;
-    grid-template-columns: 300px;
+    /* Change to 3 columns for the row pattern */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem; /* Add space between the cards */
+    justify-content: center;
 }
 
 .contact__card {
     background-color: var(--container-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 1rem;
+    padding: 1.5rem; /* Increased padding slightly */
     border-radius: 0.75rem;
     text-align: center;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.contact__card:hover {
+    transform: translateY(-5px); /* Lift card slightly on hover */
 }
 
 .contact__card-icon {
     font-size: 2rem;
-    columns: var(--title-color);
+    color: var(--title-color);
     margin-bottom: var(--mb-0-25);
+    display: block;
 }
 
 .contact__card-title,
@@ -40,11 +54,12 @@
 
 .contact__card-title {
     font-weight: var(--font-medium);
+    margin-bottom: 0.25rem;
 }
 
 .contact__card-data {
     display: block;
-    margin-bottom: var(--mb-0-25);
+    margin-bottom: 1rem; /* More space before the button */
 }
 
 .contact__button {
@@ -65,27 +80,22 @@
     transform: translate(0.25rem);
 }
 
-/* Removed form styles since the form is deleted */
+/* RESPONSIVE BREAKPOINTS */
 
+/* For Medium Devices (Tablets) */
 @media screen and (max-width: 992px) {
-    .contact__container {
-        column-gap: 3rem;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .contact__container {
-        grid-template-columns: 1fr;
-        row-gap: 3rem;
-    }
-
     .contact__info {
-        justify-content: center;
+        grid-template-columns: repeat(2, 1fr); /* 2 Columns */
     }
 }
 
+/* For Small Devices (Mobiles) */
 @media screen and (max-width: 576px) {
     .contact__info {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* 1 Column (Stack) */
+    }
+    
+    .contact__card {
+        padding: 1rem;
     }
 }
