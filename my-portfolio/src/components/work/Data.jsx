@@ -11,25 +11,27 @@ export const projectsData = [
         demoUrl: 'https://pahana-bookshop-coral.vercel.app/',
         sourceUrl: 'https://github.com/minura986/PahanaBookshop',
         status: 'completed',
+        stack: 'React, Spring Boot, Tailwind, MongoDB',
     },
     {
         id: 2,
-        image: Work6, // Using Work6 for RouteX
+        image: Work6,
         title: 'RouteX - Tourism System',
-        category: 'app', 
-        demoUrl: 'https://github.com/minura986/RouteX', // Currently pointing to GitHub
-        sourceUrl: '#', 
+        category: 'web',
+        demoUrl: 'https://github.com/minura986/RouteX',
+        sourceUrl: '#',
         status: 'completed',
+        stack: 'PHP, CSS, JavaScript, XAMPP Server',
     },
     {
         id: 3,
-        image: Work2, // Using Work2 for Shrahi
+        image: Work2,
         title: 'Shrahi Gifts N Stuffs',
         category: 'web',
-        // Swapped these to match standard: Demo = Live Site, Source = GitHub
-        demoUrl: 'https://shrahi-gifts-n-stuffs.vercel.app/', 
-        sourceUrl: 'https://github.com/minura986/Shrahi-Gifts-N-Stuffs', 
+        demoUrl: 'https://shrahi-gifts-n-stuffs.vercel.app/',
+        sourceUrl: 'https://github.com/minura986/Shrahi-Gifts-N-Stuffs',
         status: 'completed',
+        stack: 'React, Spring Boot, Tailwind, MongoDB',
     },
 ];
 

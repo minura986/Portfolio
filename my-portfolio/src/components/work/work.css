@@ -13,6 +13,7 @@
   font-weight: var(--font-medium);
   border-radius: 0.5rem;
   text-transform: capitalize;
+  transition: 0.3s;
 }
 
 .work__item:hover {
@@ -21,10 +22,11 @@
 }
 
 .work__container {
-  /* UPDATED: Set to 3 columns to show all projects in one row */
+  /* 3 Columns to show projects in one row */
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   justify-content: center;
+  position: relative;
 }
 
 .work__card {
@@ -44,17 +46,27 @@
 }
 
 .work__img {
-  /* UPDATED: Set width to 100% to fit the new grid column size */
+  /* Width 100% allows image to scale with the 3-column grid */
   width: 100%;
   height: auto;
   border-radius: 1rem;
   margin-bottom: var(--mb-1);
+  object-fit: cover;
 }
 
 .work__title {
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-0-5);
+}
+
+/* Tech Stack Styling */
+.work__stack {
+  display: block;
+  font-size: var(--tiny-font-size);
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-weight: var(--font-medium);
 }
 
 .work__button {
@@ -121,7 +133,8 @@
   border-color: var(--title-color) transparent transparent transparent;
 }
 
-/* Work Preview Modal */
+/* === PREVIEW MODAL STYLES === */
+/* (Kept in case you re-enable it later, though logic was removed from JSX) */
 .work__preview {
   position: fixed;
   top: 50%;
@@ -140,6 +153,7 @@
   animation: scaleIn 0.3s ease;
   backdrop-filter: blur(5px);
   transition: opacity 0.3s ease, background-color 0.3s ease;
+  
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.05);
 }
@@ -238,11 +252,19 @@
   to { opacity: 1; }
 }
 
-/* RESPONSIVE BREAKPOINTS */
+/* === RESPONSIVE BREAKPOINTS === */
 
+/* Large Devices (Desktops/Laptops) */
+@media screen and (max-width: 1200px) {
+  .work__container {
+    gap: 1.5rem;
+  }
+}
+
+/* Medium Devices (Tablets) */
 @media screen and (max-width: 992px) {
   .work__container {
-    grid-template-columns: repeat(2, 1fr); /* 2 Columns on tablets */
+    grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
     gap: 1.25rem;
   }
 
@@ -264,9 +286,10 @@
   }
 }
 
+/* Small Devices (Mobiles) */
 @media screen and (max-width: 768px) {
   .work__container {
-    grid-template-columns: 1fr; /* 1 Column on mobile */
+    grid-template-columns: 1fr; /* Switch to 1 column stack */
   }
   
   .work__preview {

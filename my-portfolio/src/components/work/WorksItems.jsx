@@ -40,8 +40,9 @@ const WorksItems = ({ item }) => {
 		>
 			<img src={item.image} alt='' className='work__img' />
 			<h3 className='work__title'>{item.title}</h3>
-			
-			{/* Preview logic and iframe removed */}
+            
+            {/* New Line to display the Tech Stack */}
+            <span className='work__stack'>{item.stack}</span>
 			
 			<div className='work__button-container'>
 				<a
