@@ -1,8 +1,5 @@
-import Work1 from '../../assets/Work1.png';
 import Work2 from '../../assets/Work2.png';
-import Work3 from '../../assets/Work3.png';
 import Work4 from '../../assets/Work4.png';
-import Work5 from '../../assets/Work5.png';
 import Work6 from '../../assets/Work6.png';
 
 export const projectsData = [
@@ -17,11 +14,21 @@ export const projectsData = [
     },
     {
         id: 2,
-        image: Work6, // Using Work5 as placeholder for RouteX
+        image: Work6, // Using Work6 for RouteX
         title: 'RouteX - Tourism System',
-        category: 'app', // Categorized as 'app' based on features like location services
-        demoUrl: 'https://github.com/minura986/RouteX', // Update with your actual live link if available
-        sourceUrl: '#', // Update with your GitHub repo link
+        category: 'app', 
+        demoUrl: 'https://github.com/minura986/RouteX', // Currently pointing to GitHub
+        sourceUrl: '#', 
+        status: 'completed',
+    },
+    {
+        id: 3,
+        image: Work2, // Using Work2 for Shrahi
+        title: 'Shrahi Gifts N Stuffs',
+        category: 'web',
+        // Swapped these to match standard: Demo = Live Site, Source = GitHub
+        demoUrl: 'https://shrahi-gifts-n-stuffs.vercel.app/', 
+        sourceUrl: 'https://github.com/minura986/Shrahi-Gifts-N-Stuffs', 
         status: 'completed',
     },
 ];
