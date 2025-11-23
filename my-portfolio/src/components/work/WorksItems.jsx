@@ -41,7 +41,6 @@ const WorksItems = ({ item }) => {
 			<img src={item.image} alt='' className='work__img' />
 			<h3 className='work__title'>{item.title}</h3>
             
-            {/* New Line to display the Tech Stack */}
             <span className='work__stack'>{item.stack}</span>
 			
 			<div className='work__button-container'>
@@ -54,7 +53,16 @@ const WorksItems = ({ item }) => {
 					}
 					onMouseLeave={() => setShowTooltip(false)}
 				>
-					<i className='bx bx-globe work__button-icon' /> Website
+                    {/* Updated Logic: Check category to display 'App' or 'Website' */}
+                    {item.category === 'app' ? (
+                        <>
+                            <i className='bx bx-window-alt work__button-icon' /> App
+                        </>
+                    ) : (
+                        <>
+                            <i className='bx bx-globe work__button-icon' /> Website
+                        </>
+                    )}
 				</a>
 				{showTooltip && item.status === 'development' && (
 					<div className='work__tooltip'>Under Development</div>
