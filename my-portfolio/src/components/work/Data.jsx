@@ -1,6 +1,7 @@
 import Work1 from '../../assets/Work1.png';
 import Work2 from '../../assets/Work2.png';
 import Work4 from '../../assets/Work4.png';
+import Work5 from '../../assets/Work5.png';
 import Work6 from '../../assets/Work6.png';
 
 export const projectsData = [
@@ -38,11 +39,21 @@ export const projectsData = [
         id: 4,
         image: Work1,
         title: 'POS System',
-        category: 'app', // Changed to lowercase 'app' to match the filter
-        demoUrl: '#', // Set to # since electron apps usually don't have web demos
+        category: 'app', 
+        demoUrl: '#', 
         sourceUrl: 'https://github.com/minura986/pos-system',
         status: 'completed',
         stack: 'React, JavaScript, Git, Electron, Node.js, MongoDB',
+    },
+    {
+        id: 5,
+        image: Work5,
+        title: 'Sri Agency',
+        category: 'web', 
+        demoUrl: 'https://sri-agency.vercel.app/', 
+        sourceUrl: 'https://github.com/minura986/Sri-Agency',
+        status: 'completed',
+        stack: 'React, JavaScript,css',
     },
 ];
 
