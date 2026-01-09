@@ -36,7 +36,7 @@ const Contact = () => {
                         <h3 className="contact__card-title">Call Me</h3>
                         <span className="contact__card-data">077 063 1923</span>
 
-                        <a href="tel:0723631923" className="contact__button">Call Now <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
+                        <a href="tel:0770631923" className="contact__button">Call Now <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
                     </div>
                 </div>
             </div>
